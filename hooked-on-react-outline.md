@@ -107,3 +107,4 @@ By now, almost everyone has either used or heard about React hooks. Most everyon
 - Interactive lifecycle diagram: http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ (actually kinda dumb)
 - https://reactjs.org/docs/react-component.html#componentwillunmount
 - https://medium.com/@paulrohan/migrating-react-class-based-component-to-react-hooks-6fb310aed798
+- https://medium.com/simars/react-hooks-manage-life-cycle-events-tricks-and-tips-7ed13f52ba12

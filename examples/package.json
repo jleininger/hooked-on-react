@@ -1,0 +1,26 @@
+{
+  "name": "hooked-on-react",
+  "version": "1.0.0",
+  "description": "Examples for React lifecycle migration demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "hooks",
+    "migration"
+  ],
+  "author": "Jadon Leininger",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6"
+  }
+}
