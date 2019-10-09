@@ -1,10 +1,10 @@
-import React, { Component, useState } from "react";
-import useComponentWillUpdate from "./hooks/useComponentWillUpdate";
-import useComponentWillMount from "./hooks/useComponentWillMount";
+import React, { Component, useState } from 'react';
+import useComponentWillUpdate from '../lifecycle-hooks/useComponentWillUpdate';
+import useComponentWillMount from '../lifecycle-hooks/useComponentWillMount';
 
 class ComponentWillReceiveProps extends Component {
   state = {
-    count: 0
+    count: 0,
   };
 
   countUp = () => {
@@ -23,11 +23,11 @@ class ComponentWillReceiveProps extends Component {
 
 class ComponentWillReceivePropsChild extends Component {
   state = {
-    countIsFive: false
+    countIsFive: false,
   };
 
   componentWillReceiveProps(nextProps) {
-    console.log("componentWillReceiveProps", this.props.count, nextProps.count);
+    console.log('componentWillReceiveProps', this.props.count, nextProps.count);
     if (!this.state.countIsFive && nextProps.count === 5) {
       this.setState({ countIsFive: true });
     } else if (this.state.countIsFive) {
@@ -36,7 +36,7 @@ class ComponentWillReceivePropsChild extends Component {
   }
 
   render() {
-    console.log("render", this.props.count, this.state.countIsFive);
+    console.log('render', this.props.count, this.state.countIsFive);
     return (
       <div>
         <h3>ComponentWillReceiveProps</h3>
@@ -63,7 +63,7 @@ function HookWillReceivePropsChild({ count, countUp }) {
   const lastCountProp = useComponentWillUpdate(count);
 
   if (!willMount) {
-    console.log("hook will receive props", lastCountProp, count);
+    console.log('hook will receive props', lastCountProp, count);
     if (!countIsFive && count === 5) {
       setCountIsFive(true);
     } else if (countIsFive) {
@@ -71,7 +71,7 @@ function HookWillReceivePropsChild({ count, countUp }) {
     }
   }
 
-  console.log("render", count);
+  console.log('render', count);
   return (
     <div>
       <h3>Hook will receive props</h3>
